@@ -6,6 +6,12 @@
   :dependencies [[org.clojure/clojure "1.8.0"]
                  [ring "1.7.0-RC1"]
                  [compojure "1.6.1"]]
+
+  :min-lein-version "2.0.0"
+
+  :uber-jar-name "webdev.jar"
+
   :main webdev.core
+
   :profiles {:dev
              {:main webdev.core/-dev-main}})
