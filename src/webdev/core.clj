@@ -15,14 +15,17 @@
    :body "Goodbye, cruel world!"
    :headers {}})
 
+(defn about [req]
+  {:status 200
+   :body "This is about me!"
+   :headers {}})
+
 (defroutes app
-  (GET "/" [] greet)
-  (GET "/goodbye" [] goodbye)
-  (not-found "Page not found."))
+           (GET "/" [] greet)
+           (GET "/goodbye" [] goodbye)
+           (GET "/about" [] about)
+           (not-found "Page not found."))
 
 (defn -main [port]
   (jetty/run-jetty app
                    {:port (Integer. port)}))
-
-(defn -dev-main [port]
-  (jetty/run-jetty (wrap-reload #'app) {:port (Integer. port)}))
