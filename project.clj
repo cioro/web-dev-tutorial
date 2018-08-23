@@ -15,4 +15,6 @@
 
   :profiles {:dev
              {:source-paths ["src" "dev"]
-              :main webdev.dev}})
+              :main webdev.dev}
+             :uberjar {:aot :all}}
+  )
