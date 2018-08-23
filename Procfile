@@ -1,1 +1,1 @@
-web: java $JVM_OPTS -cp target/webdev.jar clojure.main -m webdev.core $PORT
+web: java $JVM_OPTS -cp target/webdev-0.1.0-standalone.jar clojure.main -m webdev.core $PORT
